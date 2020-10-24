@@ -1,0 +1,104 @@
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+* before,
+* after {
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+.container {
+	max-width: 800px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+main {
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	background-color: #85dcbf;
+	color: #fff;
+	font-family: "Roboto", sans-serif;
+}
+
+.main__content {
+	padding-top: 200px;
+}
+.main__title {
+	text-align: center;
+	padding-bottom: 70px;
+}
+
+.main__input {
+	width: 100%;
+	flex: 0 1 70%;
+	background-color: #e27d60;
+	color: #fff;
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	padding: 20px 25px 20px 30px;
+	border-radius: 50px;
+}
+
+.main__input::placeholder {
+	color: #fff;
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	display: block;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.main__input_sub {
+	flex: 0 1 20%;
+	padding: 20px 30px;
+	color: #e27d60;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.main__input_res {
+	display: block;
+	margin: 0 auto;
+	margin-top: 50px;
+	text-align: center;
+	width: 60%;
+}
+
+@media (max-width: 640px) {
+	.main__content {
+		padding-top: 130px;
+	}
+	.row {
+		align-items: center;
+		flex-direction: column;
+	}
+	.main__input_sub {
+		margin-top: 30px;
+		width: auto;
+		flex: 0 1 30%;
+	}
+}
+@media (max-width: 450px) {
+	.main__input_res {
+		width: 100%;
+	}
+}

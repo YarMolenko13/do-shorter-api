@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<title>Do url shorter</title>
+</head>
+
+<body>
+	<main class="main">
+		<div class="container">
+			<div class="main__content">
+				<h1 class="main__title">Нou can make your link much shorter<br>Just write it below</h1>
+				<div class="container">
+					<form method="post" class="main__from">
+						<div class="row">
+							<input type="url" name="long_url" id="long_url" class="main__input"
+								placeholder="Enter link here"></input>
+							<input type="submit" class="main__input main__input_sub" value="Shorten URL"></input>
+						</div>
+					</form>
+					<input type="text" id="short_url" class="main__input main__input_res" value="{{ long_url }}">
+				</div>
+			</div>
+	</main>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			let shortUrl = document.querySelector('#short_url');
+			if (shortUrl.value == '') {
+				shortUrl.style.display = 'none';
+			} else {
+				shortUrl.style.display = 'block';
+			}
+		});
+	</script>
+</body>
+
+</html>
