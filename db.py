@@ -4,9 +4,9 @@ import psycopg2
 class Postgers:
     def __init__(self):
         """Подключаемся к БД и сохраняем курсор соединения"""
-        self.connection = psycopg2.connect(database="da33ian56enqlf", user="zzvfxwpqetoiom",
-            password="8ec73154b00e0361698db4f3fec8537c01744a2413708847d4b9b275a82f0167",
-            host="ec2-107-20-104-234.compute-1.amazonaws.com", port=5432)
+        self.connection = psycopg2.connect(database="d8e59igo676alv", user="dnwcmkwujqwacd",
+            password="55c82317567631a79b54d3db7fdd758a152f9542f2fb98408c6128927dd9551a",
+            host="ec2-107-22-241-205.compute-1.amazonaws.com", port=5432)
         self.cursor = self.connection.cursor()
 
     def insert(self, long_url, short_url, token):
